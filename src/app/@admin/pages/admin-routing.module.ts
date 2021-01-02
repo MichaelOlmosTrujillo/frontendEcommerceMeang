@@ -20,7 +20,7 @@ const routes: Routes = [
         loadChildren: () =>
           import('./users/users.module').then(
             (m) => m.UsersModule
-          ),
+          ), 
       },
       //fin del admin
     ],
