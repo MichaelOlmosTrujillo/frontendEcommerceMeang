@@ -1,4 +1,4 @@
-<ul>
+<!-- <ul>
   <li>
     <a [routerLink]="['/home']" routerLinkActive="router-link-active">
       Volver al inicio
@@ -15,5 +15,19 @@
       >Users</a
     >
   </li>
-</ul>
-<router-outlet></router-outlet>
+</ul> -->
+<div class="d-flex" id="wrapper">
+
+  <app-admin-sidebar *ngIf = "toggleValue"></app-admin-sidebar>
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+<app-admin-header (toggleChange) = "toggled($event)"></app-admin-header>   
+
+    <div class="container-fluid">
+      <app-admin-title></app-admin-title>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
